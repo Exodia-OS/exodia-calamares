@@ -1,2 +1,2 @@
 # exodia-installer
-calamares config for exodia
+calamares installer config for exodia
