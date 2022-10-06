@@ -33,7 +33,7 @@ Presentation
 
         Image {
             id: background1
-            source: "slides/1.png"
+            source: "slides/1.jpg"
             anchors.fill: parent
         }
     }
@@ -43,7 +43,7 @@ Presentation
 
         Image {
             id: background2
-            source: "slides/2.png"
+            source: "slides/2.jpg"
             anchors.fill: parent
         }
     }
@@ -53,7 +53,7 @@ Presentation
 
         Image {
             id: background3
-            source: "slides/3.png"
+            source: "slides/3.jpg"
             anchors.fill: parent
         }
     }
@@ -63,7 +63,7 @@ Presentation
 
         Image {
             id: background4
-            source: "slides/4.png"
+            source: "slides/4.jpg"
             anchors.fill: parent
         }
     }
@@ -73,7 +73,7 @@ Presentation
 
         Image {
             id: background5
-            source: "slides/5.png"
+            source: "slides/5.jpg"
             anchors.fill: parent
         }
     }
@@ -83,7 +83,7 @@ Presentation
 
         Image {
             id: background6
-            source: "slides/6.png"
+            source: "slides/6.jpg"
             anchors.fill: parent
         }
     }
