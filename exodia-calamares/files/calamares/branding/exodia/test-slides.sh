@@ -13,10 +13,10 @@
 #																										 
 #																										 
 #																										 
-#    Copyright (C) Mahmoud Mohamed (Ozil)  <https://github.com/mmsaeed509>								 
+#    Copyright (C) Mahmoud Mohamed (00xWolf)  <https://github.com/mmsaeed509>								 
 #    LICENSE © GNU-GPL3																					 
 #																										 
 ##########################################################################################################
 
 ## Test Calamares Slides ##
-qmlscene -I /usr/share/calamares/qml show.qml -geometry 825x500
+qmlscene -I /usr/share/calamares/qml show.qml -geometry 3464x3464
