@@ -78,15 +78,6 @@ Presentation
         }
     }
 
-    Slide {
-        anchors.fill: parent
-
-        Image {
-            id: background6
-            source: "slides/6.jpg"
-            anchors.fill: parent
-        }
-    }
 
     function onActivate() {
         console.log("QML Component (default slideshow) activated");
