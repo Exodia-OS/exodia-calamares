@@ -4,7 +4,7 @@
 
 pkgname=exodia-calamares
 pkgver=1.0
-pkgrel=7
+pkgrel=8
 pkgdesc="Calamares configuration for Exodia OS."
 url="https://github.com/Exodia-OS/exodia-packages"
 arch=('any')
@@ -14,16 +14,19 @@ conflicts=($pkgname)
 # depends=('calamares')
 
 prepare() {
-	cp -af ../files/. ${srcdir}
+
+	cp -af ../config/. ${srcdir}
+
 }
 
 package() {
 
-	# copy all files recursively in /etc/calamares
-	(find calamares -type f -exec install -Dm 644 "{}" "$pkgdir/etc/{}" \;)
-	# make scripts executable
-	chmod 755 "$pkgdir"/etc/calamares/launch.sh
-	chmod 755 "$pkgdir"/etc/calamares/branding/exodia/test-slides.sh
+	# copy all files recursively in /etc/calamares #
+	(find calamares -type f -exec install -Dm 644 "{}" "${pkgdir}/etc/{}" \;)
+	
+	# make scripts executable #
+	chmod 755 "${pkgdir}"/etc/calamares/launch.sh
+	chmod 755 "${pkgdir}"/etc/calamares/branding/exodia/test-slides.sh
 
 }
 

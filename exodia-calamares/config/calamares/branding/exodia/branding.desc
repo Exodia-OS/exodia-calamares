@@ -34,16 +34,16 @@ navigation: widget
 ## Strings
 strings:
     productName:         Exodia OS
-    shortProductName:    Exodia
-    #version:             2022.07
-    #shortVersion:        22.07
+    shortProductName:    Exodia OS
+#    version:             null
+#    shortVersion:        null
     versionedName:       Exodia OS
-    shortVersionedName:  Exodia
+    shortVersionedName:  Exodia OS
     bootloaderEntryName: Exodia OS
     productUrl:          https://exodia-os.github.io/exodia-website/
-    supportUrl:          https://github.com/Exodia-OS/exodia-home-ISO
+    supportUrl:          https://discord.gg/wPDyfR5AV9
     knownIssuesUrl:      https://github.com/Exodia-OS/exodia-home-ISO/issues
-    releaseNotesUrl:     https://github.com/Exodia-OS/exodia-releases
+    releaseNotesUrl:     https://github.com/Exodia-OS/exodia-home-ISO/releases
     donateUrl:           https://exodia-os.github.io/exodia-website/
 
 ## Images

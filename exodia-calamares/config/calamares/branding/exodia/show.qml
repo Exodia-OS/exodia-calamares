@@ -33,7 +33,7 @@ Presentation
 
         Image {
             id: background1
-            source: "slides/1.jpg"
+            source: "slides/1.png"
             anchors.fill: parent
         }
     }
@@ -43,7 +43,7 @@ Presentation
 
         Image {
             id: background2
-            source: "slides/2.jpg"
+            source: "slides/2.png"
             anchors.fill: parent
         }
     }
@@ -53,7 +53,7 @@ Presentation
 
         Image {
             id: background3
-            source: "slides/3.jpg"
+            source: "slides/3.png"
             anchors.fill: parent
         }
     }
@@ -63,7 +63,7 @@ Presentation
 
         Image {
             id: background4
-            source: "slides/4.jpg"
+            source: "slides/4.png"
             anchors.fill: parent
         }
     }
@@ -73,7 +73,7 @@ Presentation
 
         Image {
             id: background5
-            source: "slides/5.jpg"
+            source: "slides/5.png"
             anchors.fill: parent
         }
     }
@@ -82,12 +82,11 @@ Presentation
         anchors.fill: parent
 
         Image {
-            id: background5
+            id: background6
             source: "slides/6.png"
             anchors.fill: parent
         }
     }
-
 
     function onActivate() {
         console.log("QML Component (default slideshow) activated");
