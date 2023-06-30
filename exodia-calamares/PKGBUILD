@@ -3,8 +3,8 @@
 #
 
 pkgname=exodia-calamares
-pkgver=1.0
-pkgrel=9
+pkgver=2.0
+pkgrel=1
 pkgdesc="Calamares configuration for Exodia OS."
 url="https://github.com/Exodia-OS/exodia-packages"
 arch=('any')
