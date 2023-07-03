@@ -6,18 +6,21 @@
 
 pkgname=calamares
 _pkgname=calamares
-pkgver=3.2.62
+pkgver=3.2.61
 pkgrel=5
 pkgdesc='Distribution-independent installer framework'
 arch=('i686' 'x86_64')
 license=(GPL)
 url="https://github.com/calamares/calamares/releases"
 license=('LGPL')
+
 depends=('kconfig' 'kcoreaddons' 'kiconthemes' 'ki18n' 'kio' 'solid' 'yaml-cpp' 'kpmcore>=4.2.0' 'mkinitcpio-openswap'
          'boost-libs' 'ckbcomp' 'hwinfo' 'qt5-svg' 'polkit-qt5' 'gtk-update-icon-cache' 'plasma-framework'
          'qt5-xmlpatterns' 'squashfs-tools' 'libpwquality' 'efibootmgr' 'icu')
+
 conflicts=()
 makedepends=('extra-cmake-modules' 'qt5-tools' 'qt5-translations' 'git' 'boost')
+
 backup=(
 	'usr/share/calamares/modules/bootloader.conf'
     'usr/share/calamares/modules/displaymanager.conf'
@@ -50,14 +53,14 @@ prepare() {
 	sed -i -e 's/# DEBUG_FILESYSTEMS/DEBUG_FILESYSTEMS/' "$srcdir/${_pkgname}-${pkgver}/CMakeLists.txt"
 	sed -i -e "s/desired_size = 512 \* 1024 \* 1024  \# 512MiB/desired_size = 512 \* 1024 \* 1024 \* 4  \# 2048MiB/" "$srcdir/${_pkgname}-${pkgver}/src/modules/fstab/main.py"
 
-	# modify desktop file #
+	# modify desktop file
 	sed -i -e 's#Exec=sh.*#Exec=sh -c "/etc/calamares/launch.sh"#g' "$srcdir/${_pkgname}-${pkgver}/calamares.desktop"
 	sed -i -e 's#Name=.*#Name=Exodia OS Installer#g' "$srcdir/${_pkgname}-${pkgver}/calamares.desktop"
 	sed -i -e 's#GenericName=.*#GenericName=System Installer#g' "$srcdir/${_pkgname}-${pkgver}/calamares.desktop"
-	sed -i -e 's#Icon=.*#Icon=exodia-green-green#g' "$srcdir/${_pkgname}-${pkgver}/calamares.desktop"
+	sed -i -e 's#Icon=.*#Icon=exodia-green#g' "$srcdir/${_pkgname}-${pkgver}/calamares.desktop"
 	sed -i -e 's#Comment=.*#Comment=Exodia OS System Installer#g' "$srcdir/${_pkgname}-${pkgver}/calamares.desktop"
 
-	# add pkgrelease to patch-version #
+	# add pkgrelease to patch-version
 	cd ${_pkgname}-${pkgver}
 	_patchver="$(cat CMakeLists.txt | grep -m3 -e CALAMARES_VERSION_PATCH | grep -o "[[:digit:]]*" | xargs)"
 	sed -i -e "s|CALAMARES_VERSION_PATCH $_patchver|CALAMARES_VERSION_PATCH $_patchver-$pkgrel|g" CMakeLists.txt

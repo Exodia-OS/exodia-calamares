@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Install Calamares Dependencies #
- 
+
 sudo pacman -S --needed --noconfirm \
 		kconfig kcoreaddons kiconthemes ki18n kio solid yaml-cpp kpmcore kparts \
 		boost-libs hwinfo qt5-svg polkit-qt5 gtk-update-icon-cache plasma-framework \
